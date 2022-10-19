@@ -1,0 +1,10 @@
+{% load static %}
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>iLocator.home</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> </head> <body> <nav class="navbar navbar-expand-lg bg-light"> <div class="container-fluid"> <a class="navbar-brand" href="#"> <img  class="d-inline-block align-text-top rounded-pill" alt="" height="30" src="{% static 'logo.jpg' %}" width="32"/><i><b>iLocator</b></i></a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="navbarSupportedContent"> <ul class="navbar-nav mt-3 me-auto mb-2 mb-lg-0"> <form class="d-flex" role="search" method="post" action="">{% csrf_token %} <input name="search" class="form-control me-2" type="search" placeholder="Search Location" aria-label="Search"> <button class="btn btn-outline-success" type="submit">Search</button> </form> </div> </div> </nav><div class="alert alert-info alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole &#10024 !</strong> iLocator by iCoder. 
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<br><br><br>
+<p class="alert alert-primary h1 text-white text-center">iLocator best App for find Location for free. </p>
+<div class="card m-auto" style="width: 60rem;">  <div class="card-body">{{map|safe}}</div> </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script> </body> </html>
